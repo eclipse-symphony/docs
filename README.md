@@ -1,2 +1,3 @@
-# symphony-website
-Symphony project website
+
+# docs
+Symphony documentation
