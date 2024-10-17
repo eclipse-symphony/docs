@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>docs/</loc>
   </url><url>
-    <loc>/concepts/overview/</loc>
+    <loc>docs/concepts/overview/</loc>
   </url><url>
-    <loc>/concepts/</loc>
+    <loc>docs/concepts/</loc>
   </url><url>
-    <loc>/concepts/abstractions/</loc>
+    <loc>docs/concepts/abstractions/</loc>
   </url><url>
-    <loc>/concepts/abstractions/app_orch_model/</loc>
+    <loc>docs/concepts/abstractions/app_orch_model/</loc>
   </url><url>
-    <loc>/concepts/abstractions/info_graph/</loc>
+    <loc>docs/concepts/abstractions/info_graph/</loc>
   </url><url>
-    <loc>/concepts/abstractions/state_seeking/</loc>
+    <loc>docs/concepts/abstractions/state_seeking/</loc>
   </url><url>
-    <loc>/concepts/abstractions/workflows/</loc>
+    <loc>docs/concepts/abstractions/workflows/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>docs/categories/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>docs/tags/</loc>
   </url>
 </urlset>
