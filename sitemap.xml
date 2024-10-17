@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>docs/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/</loc>
   </url><url>
-    <loc>docs/concepts/overview/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/overview/</loc>
   </url><url>
-    <loc>docs/concepts/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/</loc>
   </url><url>
-    <loc>docs/concepts/abstractions/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/abstractions/</loc>
   </url><url>
-    <loc>docs/concepts/abstractions/app_orch_model/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/abstractions/app_orch_model/</loc>
   </url><url>
-    <loc>docs/concepts/abstractions/info_graph/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/abstractions/info_graph/</loc>
   </url><url>
-    <loc>docs/concepts/abstractions/state_seeking/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/abstractions/state_seeking/</loc>
   </url><url>
-    <loc>docs/concepts/abstractions/workflows/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/concepts/abstractions/workflows/</loc>
   </url><url>
-    <loc>docs/categories/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/categories/</loc>
   </url><url>
-    <loc>docs/tags/</loc>
+    <loc>https://eclipse-symphony.github.io/docs/tags/</loc>
   </url>
 </urlset>
