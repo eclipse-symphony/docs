@@ -17,25 +17,29 @@
 <link rel="icon" type="image/png" href="/docs/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/docs/favicons/android-192x192.png" sizes="192x192">
 
-<title>Overview | Project Symphony Docs</title>
-<meta name="description" content="Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
-Abstractions State seeking: How Symphony brings the current state of a system to the desired state.">
-<meta property="og:title" content="Overview" />
-<meta property="og:description" content="Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
-Abstractions State seeking: How Symphony brings the current state of a system to the desired state." />
+<title>Embracing the Ecosystem | Project Symphony Docs</title>
+<meta name="description" content="As a platform-neutral orchestrator, Symphony is designed to work with existing ecosystems through its extensibility model. The following summary highlights how Symphony natively integrates with various projects, services, platforms, and tools, while allowing additional extensions to be introduced at any time.
+Target Providers Symphony Target Providers are responsible for applying updates to target devices or clusters. Symphony currently includes the following built-in target providers:
+Azure Device Update for IoT Hub Azure Resource Manager (ARM) Bash Script Docker Eclipse Ankaios Eclipse uProtocol Helm Kubernetes ConfigMap Kubernetes Ingress Kubernetes Pods PowerShell RESTful API Windows 10/11 Sideloading Symphony Components Symphony system components can be swapped out to support different deployment needs and scenarios.">
+<meta property="og:title" content="Embracing the Ecosystem" />
+<meta property="og:description" content="As a platform-neutral orchestrator, Symphony is designed to work with existing ecosystems through its extensibility model. The following summary highlights how Symphony natively integrates with various projects, services, platforms, and tools, while allowing additional extensions to be introduced at any time.
+Target Providers Symphony Target Providers are responsible for applying updates to target devices or clusters. Symphony currently includes the following built-in target providers:
+Azure Device Update for IoT Hub Azure Resource Manager (ARM) Bash Script Docker Eclipse Ankaios Eclipse uProtocol Helm Kubernetes ConfigMap Kubernetes Ingress Kubernetes Pods PowerShell RESTful API Windows 10/11 Sideloading Symphony Components Symphony system components can be swapped out to support different deployment needs and scenarios." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://eclipse-symphony.github.io/docs/concepts/overview/" /><meta property="article:section" content="Concepts" />
+<meta property="og:url" content="https://eclipse-symphony.github.io/docs/ecosystem/" /><meta property="article:section" content="" />
 
 
-<meta itemprop="name" content="Overview">
-<meta itemprop="description" content="Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
-Abstractions State seeking: How Symphony brings the current state of a system to the desired state.">
+<meta itemprop="name" content="Embracing the Ecosystem">
+<meta itemprop="description" content="As a platform-neutral orchestrator, Symphony is designed to work with existing ecosystems through its extensibility model. The following summary highlights how Symphony natively integrates with various projects, services, platforms, and tools, while allowing additional extensions to be introduced at any time.
+Target Providers Symphony Target Providers are responsible for applying updates to target devices or clusters. Symphony currently includes the following built-in target providers:
+Azure Device Update for IoT Hub Azure Resource Manager (ARM) Bash Script Docker Eclipse Ankaios Eclipse uProtocol Helm Kubernetes ConfigMap Kubernetes Ingress Kubernetes Pods PowerShell RESTful API Windows 10/11 Sideloading Symphony Components Symphony system components can be swapped out to support different deployment needs and scenarios.">
 
-<meta itemprop="wordCount" content="104">
+<meta itemprop="wordCount" content="155">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Overview"/>
-<meta name="twitter:description" content="Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
-Abstractions State seeking: How Symphony brings the current state of a system to the desired state."/>
+<meta name="twitter:title" content="Embracing the Ecosystem"/>
+<meta name="twitter:description" content="As a platform-neutral orchestrator, Symphony is designed to work with existing ecosystems through its extensibility model. The following summary highlights how Symphony natively integrates with various projects, services, platforms, and tools, while allowing additional extensions to be introduced at any time.
+Target Providers Symphony Target Providers are responsible for applying updates to target devices or clusters. Symphony currently includes the following built-in target providers:
+Azure Device Update for IoT Hub Azure Resource Manager (ARM) Bash Script Docker Eclipse Ankaios Eclipse uProtocol Helm Kubernetes ConfigMap Kubernetes Ingress Kubernetes Pods PowerShell RESTful API Windows 10/11 Sideloading Symphony Components Symphony system components can be swapped out to support different deployment needs and scenarios."/>
 <link rel="preload" href="/docs/scss/main.min.78ba82c30a159149deeccdacc15f8ac98360dcb8ce28011bbdea8a4899fb8c18.css" as="style" integrity="sha256-eLqCwwoVkUne7M2swV&#43;KyYNg3LjOKAEbveqKSJn7jBg=" crossorigin="anonymous">
 <link href="/docs/scss/main.min.78ba82c30a159149deeccdacc15f8ac98360dcb8ce28011bbdea8a4899fb8c18.css" rel="stylesheet" integrity="sha256-eLqCwwoVkUne7M2swV&#43;KyYNg3LjOKAEbveqKSJn7jBg=" crossorigin="anonymous">
 <script
@@ -124,14 +128,14 @@ Abstractions State seeking: How Symphony brings the current state of a system to
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
   <a href="/docs/" title="Project Symphony Documentation" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Home</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconcepts-li">
-  <input type="checkbox" id="m-docsconcepts-check" checked/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
+  <input type="checkbox" id="m-docsconcepts-check"/>
   <label for="m-docsconcepts-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsconceptsoverview-li">
-  <input type="checkbox" id="m-docsconceptsoverview-check" checked/>
-  <label for="m-docsconceptsoverview-check"><a href="/docs/concepts/overview/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docsconceptsoverview"><span class="td-sidebar-nav-active-item">Overview</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsoverview-li">
+  <input type="checkbox" id="m-docsconceptsoverview-check"/>
+  <label for="m-docsconceptsoverview-check"><a href="/docs/concepts/overview/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsoverview"><span class="">Overview</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconceptsabstractions-li">
   <input type="checkbox" id="m-docsconceptsabstractions-check"/>
@@ -180,9 +184,9 @@ Abstractions State seeking: How Symphony brings the current state of a system to
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsecosystem-li">
-  <input type="checkbox" id="m-docsecosystem-check"/>
-  <label for="m-docsecosystem-check"><a href="/docs/ecosystem/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsecosystem"><span class="">Ecosystem</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsecosystem-li">
+  <input type="checkbox" id="m-docsecosystem-check" checked/>
+  <label for="m-docsecosystem-check"><a href="/docs/ecosystem/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docsecosystem"><span class="td-sidebar-nav-active-item">Ecosystem</span></a></label>
   
 </li>
   </ul>
@@ -224,28 +228,70 @@ Abstractions State seeking: How Symphony brings the current state of a system to
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
   <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="/docs/concepts/">Concepts</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Overview</li>
+    Ecosystem</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Overview</h1>
+	<h1>Embracing the Ecosystem</h1>
 	
 	<header class="article-meta">
 		
 </header>
-	<p>Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.</p>
-<h2 id="abstractions">Abstractions</h2>
+	<p>As a platform-neutral orchestrator, Symphony is designed to work with existing ecosystems through its extensibility model. The following summary highlights how Symphony natively integrates with various projects, services, platforms, and tools, while allowing additional extensions to be introduced at any time.</p>
+<h2 id="target-providers">Target Providers</h2>
+<p>Symphony Target Providers are responsible for applying updates to target devices or clusters. Symphony currently includes the following built-in target providers:</p>
 <ul>
-<li><a href="./state_seeking.md">State seeking</a>: How Symphony brings the current state of a system to the desired state.</li>
-<li><a href="./information_graph.md">Information graph</a>: How Symphony organizes, accesses, and synchronizes enterprise information.</li>
-<li><a href="./workflows.md">Workflows</a>: How Symphony manages multi-stage deployment scenarios.</li>
-<li><a href="./orchestration_model.md">App orchestration model</a>: How Symphony defines the components that make up a scenario.</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/iot-hub-device-update/" target="_blank" rel="noopener">Azure Device Update for IoT Hub</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview" target="_blank" rel="noopener">Azure Resource Manager (ARM)</a></li>
+<li><a href="https://www.w3schools.com/bash/bash_script.php" target="_blank" rel="noopener">Bash Script</a></li>
+<li><a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a></li>
+<li><a href="https://projects.eclipse.org/projects/automotive.ankaios" target="_blank" rel="noopener">Eclipse Ankaios</a></li>
+<li><a href="https://uprotocol.org/" target="_blank" rel="noopener">Eclipse uProtocol</a></li>
+<li><a href="https://helm.sh/" target="_blank" rel="noopener">Helm</a></li>
+<li><a href="https://kubernetes.io/" target="_blank" rel="noopener">Kubernetes ConfigMap</a></li>
+<li><a href="https://kubernetes.io/" target="_blank" rel="noopener">Kubernetes Ingress</a></li>
+<li><a href="https://kubernetes.io/" target="_blank" rel="noopener">Kubernetes Pods</a></li>
+<li><a href="https://learn.microsoft.com/en-us/powershell/" target="_blank" rel="noopener">PowerShell</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages" target="_blank" rel="noopener">RESTful API</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/application-management/sideload-apps-in-windows" target="_blank" rel="noopener">Windows 10/11 Sideloading</a></li>
+</ul>
+<h2 id="symphony-components">Symphony Components</h2>
+<p>Symphony system components can be swapped out to support different deployment needs and scenarios. Symphony currently ships with the following swappable system components:</p>
+<ul>
+<li>
+<p><strong>Identity Providers</strong></p>
+<ul>
+<li>Local user/password</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/attestation/overview" target="_blank" rel="noopener">Microsoft Azure Atteststation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/entra/fundamentals/what-is-entra" target="_blank" rel="noopener">Microsoft Entra</a> (including managed identities)</li>
+<li><a href="https://en.wikipedia.org/wiki/OpenID" target="_blank" rel="noopener">OpenID Connect (OIDC)</a> compatible identity providers</li>
+</ul>
+</li>
+<li>
+<p><strong>Message Bus</strong></p>
+<ul>
+<li>In-memory pub-sub</li>
+<li><a href="https://mqtt.org/" target="_blank" rel="noopener">MQTT</a> brokers</li>
+</ul>
+</li>
+<li>
+<p><strong>Secret Store</strong></p>
+<ul>
+<li><a href="https://kubernetes.io/" target="_blank" rel="noopener">Kubernetes secrets</a></li>
+</ul>
+</li>
+<li>
+<p><strong>State Store</strong></p>
+<ul>
+<li>In-memroy store</li>
+<li><a href="https://kubernetes.io/" target="_blank" rel="noopener">Kubernetes state store</a></li>
+<li><a href="https://redis.io/" target="_blank" rel="noopener">Redis</a></li>
+</ul>
+</li>
 </ul>
 
 	

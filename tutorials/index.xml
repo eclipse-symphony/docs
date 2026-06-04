@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started Tutorials on Project Symphony Docs</title>
+    <link>https://eclipse-symphony.github.io/docs/tutorials/</link>
+    <description>Recent content in Getting Started Tutorials on Project Symphony Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://eclipse-symphony.github.io/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Symphony as a Single Process</title>
+      <link>https://eclipse-symphony.github.io/docs/tutorials/run-symphony-as-single-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eclipse-symphony.github.io/docs/tutorials/run-symphony-as-single-process/</guid>
+      <description>This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
+Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
+Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &amp;#34;iwr -useb https://raw.</description>
+    </item>
+    
+  </channel>
+</rss>

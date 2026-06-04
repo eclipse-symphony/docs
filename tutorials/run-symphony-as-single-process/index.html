@@ -1,0 +1,405 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/docs/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/docs/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/docs/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/docs/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/docs/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/docs/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/docs/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/docs/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/docs/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/docs/favicons/android-192x192.png" sizes="192x192">
+
+<title>Run Symphony as a Single Process | Project Symphony Docs</title>
+<meta name="description" content="This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
+Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
+Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &amp;#34;iwr -useb https://raw.">
+<meta property="og:title" content="Run Symphony as a Single Process" />
+<meta property="og:description" content="This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
+Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
+Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &#34;iwr -useb https://raw." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eclipse-symphony.github.io/docs/tutorials/run-symphony-as-single-process/" /><meta property="article:section" content="tutorials" />
+
+
+<meta itemprop="name" content="Run Symphony as a Single Process">
+<meta itemprop="description" content="This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
+Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
+Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &#34;iwr -useb https://raw.">
+
+<meta itemprop="wordCount" content="331">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Run Symphony as a Single Process"/>
+<meta name="twitter:description" content="This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
+Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
+Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &#34;iwr -useb https://raw."/>
+<link rel="preload" href="/docs/scss/main.min.78ba82c30a159149deeccdacc15f8ac98360dcb8ce28011bbdea8a4899fb8c18.css" as="style" integrity="sha256-eLqCwwoVkUne7M2swV&#43;KyYNg3LjOKAEbveqKSJn7jBg=" crossorigin="anonymous">
+<link href="/docs/scss/main.min.78ba82c30a159149deeccdacc15f8ac98360dcb8ce28011bbdea8a4899fb8c18.css" rel="stylesheet" integrity="sha256-eLqCwwoVkUne7M2swV&#43;KyYNg3LjOKAEbveqKSJn7jBg=" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bffu3v0r2p");
+</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=SAMPLE"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'SAMPLE');
+        }
+      </script>
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/docs/">
+		<span class="navbar-logo"></span><span class="font-weight-bold navbar-brand__name">Project Symphony Docs</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://eclipse.dev/symphony/" target="_blank" ><i class='fas fa-home'></i><span>Home</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://github.com/eclipse-symphony/symphony" target="_blank" ><i class='fab fa-github'></i><span>GitHub</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"></div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <div id="content-mobile">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  </div>
+  <div id="content-desktop"></div>
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" title="Project Symphony Documentation" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Home</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
+  <input type="checkbox" id="m-docsconcepts-check"/>
+  <label for="m-docsconcepts-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsoverview-li">
+  <input type="checkbox" id="m-docsconceptsoverview-check"/>
+  <label for="m-docsconceptsoverview-check"><a href="/docs/concepts/overview/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsoverview"><span class="">Overview</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconceptsabstractions-li">
+  <input type="checkbox" id="m-docsconceptsabstractions-check"/>
+  <label for="m-docsconceptsabstractions-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconceptsabstractions"><span class="">Abstractions</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsapp_orch_model-li">
+  <input type="checkbox" id="m-docsconceptsabstractionsapp_orch_model-check"/>
+  <label for="m-docsconceptsabstractionsapp_orch_model-check"><a href="/docs/concepts/abstractions/app_orch_model/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsapp_orch_model"><span class="">App Orchestration Model</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsinfo_graph-li">
+  <input type="checkbox" id="m-docsconceptsabstractionsinfo_graph-check"/>
+  <label for="m-docsconceptsabstractionsinfo_graph-check"><a href="/docs/concepts/abstractions/info_graph/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsinfo_graph"><span class="">Information Graph</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsstate_seeking-li">
+  <input type="checkbox" id="m-docsconceptsabstractionsstate_seeking-check"/>
+  <label for="m-docsconceptsabstractionsstate_seeking-check"><a href="/docs/concepts/abstractions/state_seeking/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsstate_seeking"><span class="">State Seeking</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsworkflows-li">
+  <input type="checkbox" id="m-docsconceptsabstractionsworkflows-check"/>
+  <label for="m-docsconceptsabstractionsworkflows-check"><a href="/docs/concepts/abstractions/workflows/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsworkflows"><span class="">Workflows</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docstutorials-li">
+  <input type="checkbox" id="m-docstutorials-check" checked/>
+  <label for="m-docstutorials-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docstutorials"><span class="">Tutorials</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsrun-symphony-as-single-process-li">
+  <input type="checkbox" id="m-docstutorialsrun-symphony-as-single-process-check" checked/>
+  <label for="m-docstutorialsrun-symphony-as-single-process-check"><a href="/docs/tutorials/run-symphony-as-single-process/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsrun-symphony-as-single-process"><span class="td-sidebar-nav-active-item">Single Process</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docssamples-li">
+  <input type="checkbox" id="m-docssamples-check"/>
+  <label for="m-docssamples-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docssamples"><span class="">Samples</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssamplesdefault-content-li">
+  <input type="checkbox" id="m-docssamplesdefault-content-check"/>
+  <label for="m-docssamplesdefault-content-check"><a href="/docs/samples/default-content/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docssamplesdefault-content"><span class="">Default Sample</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsecosystem-li">
+  <input type="checkbox" id="m-docsecosystem-check"/>
+  <label for="m-docsecosystem-check"><a href="/docs/ecosystem/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsecosystem"><span class="">Ecosystem</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+            
+
+
+<hr />
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1-launch-symphony-in-a-process">Part 1: Launch Symphony in a Process</a></li>
+    <li><a href="#part-2-deploying-a-docker-container">Part 2: Deploying a Docker container</a></li>
+    <li><a href="#part-3-clean-up">Part 3: Clean up</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+
+
+
+
+
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/tutorials/">Tutorials</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Single Process</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Run Symphony as a Single Process</h1>
+	
+	<header class="article-meta">
+		
+</header>
+	<p>This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.</p>
+<h2 id="part-1-launch-symphony-in-a-process">Part 1: Launch Symphony in a Process</h2>
+<ol>
+<li>
+<p>Install Maestro and launch Symphony as a process (enabled by the <code>--no-k8s</code> switch):</p>
+
+    
+    
+    <ul class="nav nav-tabs" id="tabs-0" role="tablist">
+  <li class="nav-item">
+      <button class="nav-link active"
+          id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+          data-td-tp-persist="bash" aria-controls="tabs-00-00" aria-selected="true">
+        Bash (Linux/WSL/Mac)
+      </button>
+    </li><li class="nav-item">
+      <button class="nav-link"
+          id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+          data-td-tp-persist="powershell" aria-controls="tabs-00-01" aria-selected="false">
+        PowerShell (Windows)
+      </button>
+    </li>
+</ul>
+
+<div class="tab-content" id="tabs-0-content">
+    <div class="tab-pane fade show active"
+        id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash
+</span></span><span style="display:flex;"><span>    maestro up --no-k8s
+</span></span><span style="display:flex;"><span>    </span></span></code></pre></div>
+    </div>
+    <div class="tab-pane fade"
+        id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0">
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>    powershell -Command <span style="color:#e6db74">&#34;iwr -useb https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.ps1 | iex&#34;</span>
+</span></span><span style="display:flex;"><span>    maestro up --no-k8s
+</span></span><span style="display:flex;"><span>    </span></span></code></pre></div>
+    </div>
+</div>
+
+</li>
+<li>
+<p>In a separate Terminal Window, Invoke the <code>greeting</code> endpoint which doesn&rsquo;t require authentication:</p>
+
+    
+    
+    <ul class="nav nav-tabs" id="tabs-1" role="tablist">
+  <li class="nav-item">
+      <button class="nav-link active"
+          id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+          data-td-tp-persist="bash" aria-controls="tabs-01-00" aria-selected="true">
+        Bash (Linux/WSL/Mac)
+      </button>
+    </li><li class="nav-item">
+      <button class="nav-link"
+          id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
+          data-td-tp-persist="powershell" aria-controls="tabs-01-01" aria-selected="false">
+        PowerShell (Windows)
+      </button>
+    </li>
+</ul>
+
+<div class="tab-content" id="tabs-1-content">
+    <div class="tab-pane fade show active"
+        id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    curl -L http://localhost:8082/v1alpha2/greetings
+</span></span><span style="display:flex;"><span>    </span></span></code></pre></div>
+    </div>
+    <div class="tab-pane fade"
+        id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>    (iwr http<span style="color:#960050;background-color:#1e0010">:</span>//localhost<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8082</span>/v1alpha2/greetings -UseBasicParsing).Content
+</span></span><span style="display:flex;"><span>    maestro up --no-k8s
+</span></span><span style="display:flex;"><span>    </span></span></code></pre></div>
+    </div>
+</div>
+
+<p>You shoulde see a string reponse:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hello from Symphony K8s control plane <span style="color:#f92672">(</span>S8C<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="part-2-deploying-a-docker-container">Part 2: Deploying a Docker container</h2>
+<blockquote>
+<p><strong>NOTE:</strong> You need Docker for this part</p>
+</blockquote>
+<ol>
+<li>
+<p>Use maestro to deploy the hello-world sample, which deploys a Prometheus server Docker container to your machine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>maestro samples run hello-world
+</span></span></code></pre></div><p>You should see outputs like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Creating target sample-local-target ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Creating solutionversion-container sample-prometheus-server ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Creating solutionversion sample-prometheus-server-v-v1 ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Creating instance sample-prometheus-instance ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>⣟  NOTE: Navigate to http://localhost:9090/ to access the Promethus portal <span style="color:#f92672">(</span>it may take a few seconds <span style="color:#66d9ef">for</span> the Prometheus server to be ready<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p>After a few moments, you should be able to see the Docker container deployed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><p>you should see a <code>sample-prometheus-server</code> container in the list.</p>
+</li>
+<li>
+<p>Symphony does continuous state seeking. If you delete the container, Symphony brings it back because that&rsquo;s what the desired state is. To test this, manually shut down the container:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm -f sample-prometheus-server
+</span></span></code></pre></div><p>Then, after a few moments (during next reconcilation loop), the container should be brought back.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><p>You should see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>... IMAGE           ... CREATED          STATUS             PORTS                       NAMES
+</span></span><span style="display:flex;"><span>... prom/prometheus ... <span style="color:#ae81ff">18</span> seconds ago   Up <span style="color:#ae81ff">17</span> seconds      0.0.0.0:9090-&gt;9090/tcp      sample-prometheus-server
+</span></span></code></pre></div></li>
+<li>
+<p>(Optional) Open a browser and navigate to <code>http://localhost:9090</code> to see the Prometheus interface.</p>
+</li>
+</ol>
+<h2 id="part-3-clean-up">Part 3: Clean up</h2>
+<ol>
+<li>Kill the Symphony process with <code>Ctrl+C</code>.</li>
+<li>(Optional) Remove the container:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm -f sample-prometheus-server
+</span></span></code></pre></div></li>
+</ol>
+
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/docs/js/main.min.1967c15222b40a055b0268a691735738876d8a57829afad6a9ace023618f55f3.js" integrity="sha256-GWfBUiK0CgVbAmimkXNXOIdtileCmvrWqazgI2GPVfM=" crossorigin="anonymous"></script>
+<script defer src="/docs/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/docs/js/tabpane-persist.js'></script>
+
+<script src="/js/copy-code-button.js"></script>
+<script src="/js/clarity.js"></script>
+
+  </body>
+</html>
