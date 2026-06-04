@@ -40,8 +40,8 @@ Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.
 <meta name="twitter:description" content="This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
 Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
 Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &#34;iwr -useb https://raw."/>
-<link rel="preload" href="/docs/scss/main.min.78ba82c30a159149deeccdacc15f8ac98360dcb8ce28011bbdea8a4899fb8c18.css" as="style" integrity="sha256-eLqCwwoVkUne7M2swV&#43;KyYNg3LjOKAEbveqKSJn7jBg=" crossorigin="anonymous">
-<link href="/docs/scss/main.min.78ba82c30a159149deeccdacc15f8ac98360dcb8ce28011bbdea8a4899fb8c18.css" rel="stylesheet" integrity="sha256-eLqCwwoVkUne7M2swV&#43;KyYNg3LjOKAEbveqKSJn7jBg=" crossorigin="anonymous">
+<link rel="preload" href="/docs/scss/main.min.d9b935093e5d382ed69ca976bbbae42a7d7a5bbd7d6d52322bc271b0c1f9d3c0.css" as="style" integrity="sha256-2bk1CT5dOC7WnKl2u7rkKn16W719bVIyK8JxsMH508A=" crossorigin="anonymous">
+<link href="/docs/scss/main.min.d9b935093e5d382ed69ca976bbbae42a7d7a5bbd7d6d52322bc271b0c1f9d3c0.css" rel="stylesheet" integrity="sha256-2bk1CT5dOC7WnKl2u7rkKn16W719bVIyK8JxsMH508A=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -126,7 +126,7 @@ Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.
   <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
-  <a href="/docs/" title="Project Symphony Documentation" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Home</span></a>
+  <a href="/docs/" title="Eclipse Symphony Documentation" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Home</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
   <input type="checkbox" id="m-docsconcepts-check"/>
@@ -139,16 +139,16 @@ Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconceptsabstractions-li">
   <input type="checkbox" id="m-docsconceptsabstractions-check"/>
-  <label for="m-docsconceptsabstractions-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconceptsabstractions"><span class="">Abstractions</span></a></label>
+  <label for="m-docsconceptsabstractions-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconceptsabstractions"><span class="">Core Concepts</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsapp_orch_model-li">
-  <input type="checkbox" id="m-docsconceptsabstractionsapp_orch_model-check"/>
-  <label for="m-docsconceptsabstractionsapp_orch_model-check"><a href="/docs/concepts/abstractions/app_orch_model/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsapp_orch_model"><span class="">App Orchestration Model</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsinfo_graph-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsinfo_graph-li">
   <input type="checkbox" id="m-docsconceptsabstractionsinfo_graph-check"/>
   <label for="m-docsconceptsabstractionsinfo_graph-check"><a href="/docs/concepts/abstractions/info_graph/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsinfo_graph"><span class="">Information Graph</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsorch_model-li">
+  <input type="checkbox" id="m-docsconceptsabstractionsorch_model-check"/>
+  <label for="m-docsconceptsabstractionsorch_model-check"><a href="/docs/concepts/abstractions/orch_model/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsorch_model"><span class="">Orchestration Model</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsstate_seeking-li">
   <input type="checkbox" id="m-docsconceptsabstractionsstate_seeking-check"/>
@@ -169,7 +169,11 @@ Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docstutorialsrun-symphony-as-single-process-li">
   <input type="checkbox" id="m-docstutorialsrun-symphony-as-single-process-check" checked/>
-  <label for="m-docstutorialsrun-symphony-as-single-process-check"><a href="/docs/tutorials/run-symphony-as-single-process/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsrun-symphony-as-single-process"><span class="td-sidebar-nav-active-item">Single Process</span></a></label>
+  <label for="m-docstutorialsrun-symphony-as-single-process-check"><a href="/docs/tutorials/run-symphony-as-single-process/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docstutorialsrun-symphony-as-single-process"><span class="td-sidebar-nav-active-item">Symphony as a Process</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstutorialsrun-symphony-on-k8s-li">
+  <input type="checkbox" id="m-docstutorialsrun-symphony-on-k8s-check"/>
+  <label for="m-docstutorialsrun-symphony-on-k8s-check"><a href="/docs/tutorials/run-symphony-on-k8s/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docstutorialsrun-symphony-on-k8s"><span class="">Symphony on Kubernetes</span></a></label>
   
 </li>
   </ul>
@@ -242,7 +246,7 @@ Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.
   <li class="breadcrumb-item">
     <a href="/docs/tutorials/">Tutorials</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Single Process</li>
+    Symphony as a Process</li>
   </ol>
 </nav>
             
@@ -341,7 +345,7 @@ Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>maestro samples run hello-world
 </span></span></code></pre></div><p>You should see outputs like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Creating target sample-local-target ... <span style="color:#66d9ef">done</span>
-</span></span><span style="display:flex;"><span>Creating solutionversion-container sample-prometheus-server ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Creating solution sample-prometheus-server ... <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>Creating solutionversion sample-prometheus-server-v-v1 ... <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>Creating instance sample-prometheus-instance ... <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span>⣟  NOTE: Navigate to http://localhost:9090/ to access the Promethus portal <span style="color:#f92672">(</span>it may take a few seconds <span style="color:#66d9ef">for</span> the Prometheus server to be ready<span style="color:#f92672">)</span>

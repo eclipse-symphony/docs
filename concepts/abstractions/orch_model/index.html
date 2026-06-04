@@ -1,10 +1,8 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
   <head>
-	<meta name="generator" content="Hugo 0.117.0">
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="https://eclipse-symphony.github.io/docs/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -19,16 +17,29 @@
 <link rel="icon" type="image/png" href="/docs/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/docs/favicons/android-192x192.png" sizes="192x192">
 
-<title>Project Symphony Docs</title>
-<meta name="description" content="">
-<meta property="og:title" content="Eclipse Symphony Documentation" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://eclipse-symphony.github.io/docs/" />
-<meta itemprop="name" content="Eclipse Symphony Documentation">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Eclipse Symphony Documentation"/>
-<meta name="twitter:description" content=""/>
+<title>Orchestration Model | Project Symphony Docs</title>
+<meta name="description" content="As an orchestrator, Symphony purposefully designs a modeling language for orchestration purposes. We refer to this model as the orchestration model. Objects in the orchestration model establish desired state of a system. Symphony runs a continuous state seeking loop that brings the probed system current state towards the desired state.
+Three core object types Symphony desired state is described using three core object types: Solution, Target, and Instance.
+A Solution describes a software stack.">
+<meta property="og:title" content="Orchestration Model" />
+<meta property="og:description" content="As an orchestrator, Symphony purposefully designs a modeling language for orchestration purposes. We refer to this model as the orchestration model. Objects in the orchestration model establish desired state of a system. Symphony runs a continuous state seeking loop that brings the probed system current state towards the desired state.
+Three core object types Symphony desired state is described using three core object types: Solution, Target, and Instance.
+A Solution describes a software stack." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eclipse-symphony.github.io/docs/concepts/abstractions/orch_model/" /><meta property="article:section" content="Concepts" />
+
+
+<meta itemprop="name" content="Orchestration Model">
+<meta itemprop="description" content="As an orchestrator, Symphony purposefully designs a modeling language for orchestration purposes. We refer to this model as the orchestration model. Objects in the orchestration model establish desired state of a system. Symphony runs a continuous state seeking loop that brings the probed system current state towards the desired state.
+Three core object types Symphony desired state is described using three core object types: Solution, Target, and Instance.
+A Solution describes a software stack.">
+
+<meta itemprop="wordCount" content="537">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Orchestration Model"/>
+<meta name="twitter:description" content="As an orchestrator, Symphony purposefully designs a modeling language for orchestration purposes. We refer to this model as the orchestration model. Objects in the orchestration model establish desired state of a system. Symphony runs a continuous state seeking loop that brings the probed system current state towards the desired state.
+Three core object types Symphony desired state is described using three core object types: Solution, Target, and Instance.
+A Solution describes a software stack."/>
 <link rel="preload" href="/docs/scss/main.min.d9b935093e5d382ed69ca976bbbae42a7d7a5bbd7d6d52322bc271b0c1f9d3c0.css" as="style" integrity="sha256-2bk1CT5dOC7WnKl2u7rkKn16W719bVIyK8JxsMH508A=" crossorigin="anonymous">
 <link href="/docs/scss/main.min.d9b935093e5d382ed69ca976bbbae42a7d7a5bbd7d6d52322bc271b0c1f9d3c0.css" rel="stylesheet" integrity="sha256-2bk1CT5dOC7WnKl2u7rkKn16W719bVIyK8JxsMH508A=" crossorigin="anonymous">
 <script
@@ -59,7 +70,7 @@
         }
       </script>
   </head>
-  <body class="td-home">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -115,10 +126,10 @@
   <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
-  <a href="/docs/" title="Eclipse Symphony Documentation" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="td-sidebar-nav-active-item">Home</span></a>
+  <a href="/docs/" title="Eclipse Symphony Documentation" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Home</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconcepts-li">
-  <input type="checkbox" id="m-docsconcepts-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconcepts-li">
+  <input type="checkbox" id="m-docsconcepts-check" checked/>
   <label for="m-docsconcepts-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconcepts"><span class="">Concepts</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -126,8 +137,8 @@
   <input type="checkbox" id="m-docsconceptsoverview-check"/>
   <label for="m-docsconceptsoverview-check"><a href="/docs/concepts/overview/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsoverview"><span class="">Overview</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsconceptsabstractions-li">
-  <input type="checkbox" id="m-docsconceptsabstractions-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsconceptsabstractions-li">
+  <input type="checkbox" id="m-docsconceptsabstractions-check" checked/>
   <label for="m-docsconceptsabstractions-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsconceptsabstractions"><span class="">Core Concepts</span></a></label>
   
   <ul class="ul-3 foldable">
@@ -135,9 +146,9 @@
   <input type="checkbox" id="m-docsconceptsabstractionsinfo_graph-check"/>
   <label for="m-docsconceptsabstractionsinfo_graph-check"><a href="/docs/concepts/abstractions/info_graph/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsinfo_graph"><span class="">Information Graph</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsorch_model-li">
-  <input type="checkbox" id="m-docsconceptsabstractionsorch_model-check"/>
-  <label for="m-docsconceptsabstractionsorch_model-check"><a href="/docs/concepts/abstractions/orch_model/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsorch_model"><span class="">Orchestration Model</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsconceptsabstractionsorch_model-li">
+  <input type="checkbox" id="m-docsconceptsabstractionsorch_model-check" checked/>
+  <label for="m-docsconceptsabstractionsorch_model-check"><a href="/docs/concepts/abstractions/orch_model/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docsconceptsabstractionsorch_model"><span class="td-sidebar-nav-active-item">Orchestration Model</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsconceptsabstractionsstate_seeking-li">
   <input type="checkbox" id="m-docsconceptsabstractionsstate_seeking-check"/>
@@ -206,20 +217,34 @@
             
 
 
+<hr />
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#three-core-object-types">Three core object types</a>
+      <ul>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#target">Target</a></li>
+        <li><a href="#instance">Instance</a></li>
+      </ul>
+    </li>
+    <li><a href="#other-object-types">Other object types</a>
+      <ul>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#campaign-and-activation">Campaign and Activation</a></li>
+      </ul>
+    </li>
+    <li><a href="#multi-versioned-objects">Multi-versioned objects</a></li>
+  </ul>
+</nav></div>
+
 
 
             
 
 
 
-  
-  
 
 
-
-
-  
-  
 
 
           </aside>
@@ -227,169 +252,79 @@
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/concepts/">Concepts</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/concepts/abstractions/">Core Concepts</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Home</li>
+    Orchestration Model</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Eclipse Symphony Documentation</h1>
-  
+	<h1>Orchestration Model</h1>
+	
 	<header class="article-meta">
 		
 </header>
+	<p>As an orchestrator, Symphony purposefully designs a modeling language for orchestration purposes. We refer to this model as the <em>orchestration model</em>. Objects in the orchestration model establish desired state of a system. Symphony runs a continuous state seeking loop that brings the probed system current state towards the desired state.</p>
+<h2 id="three-core-object-types">Three core object types</h2>
+<p>Symphony desired state is described using three core object types: <strong>Solution</strong>, <strong>Target</strong>, and <strong>Instance</strong>.</p>
+<p>A <strong>Solution</strong> describes a software stack. A <strong>Target</strong> describes an environment where software can be deployed. An <strong>Instance</strong> describes a deployment of a Solution to one or more Targets.</p>
+<p>Why use three separate objects? The design separates three distinct concerns that may have different lifecycles and involve different personas, as summarized in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Object Type</th>
+<th>Usage</th>
+<th>User Persona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solution</td>
+<td>Describes a software stack</td>
+<td>Developers, ISVs</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>Describes an infrastructure environment</td>
+<td>IT, Ops</td>
+</tr>
+<tr>
+<td>Instance</td>
+<td>Describes a deployment of software to infrastructure</td>
+<td>IT, Ops</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solution">Solution</h3>
+<p>A <strong>Solution</strong> describes a software stack. It consists of a list of Components, each representing a piece of software, such as a container, an eBPF module, a binary image, or anything else supported by the Symphony ecosystem.</p>
+<p>Components can have dependencies, and Symphony ensures that they are deployed according to their dependency relationships.</p>
+<h3 id="target">Target</h3>
+<p>A <strong>Target</strong> describes an infrastructure environment where software can be deployed. A Target is not limited to a physical piece of hardware. It can be a server, a virtual machine, an edge device, a cluster such as Kubernetes, a service endpoint, or simply a virtual target.</p>
+<p>As a side note, a Target can also define its own Component list. These are infrastructure-level components that are independent of Solutions. Symphony applies the same state-seeking loop to Targets to ensure that their desired infrastructure components are provisioned.</p>
+<h3 id="instance">Instance</h3>
+<p>An <strong>Instance</strong> takes a Solution and maps its Components to one or more Targets.</p>
+<p>A Solution can be deployed to selected Targets as a complete stack. Its Components can also be distributed across multiple Targets based on target characteristics. For example, a frontend component could be deployed to a Windows machine, while a backend service is deployed to a Kubernetes cluster.</p>
+<h2 id="other-object-types">Other object types</h2>
+<p>In addition to the three core object types, Symphony also provides additional object types for different scenarios.</p>
+<h3 id="catalog">Catalog</h3>
+<p>A <strong>Catalog</strong> is a versatile object in Symphony. It is a generic carrier for a piece of information, such as application configuration, security policies, solution templates, and other reusable artifacts.</p>
+<p>When multiple Symphony installations are linked together, Catalog is the object type that is synchronized across Symphony installations, which are called <strong>sites</strong>.</p>
+<p>Catalog objects support information ontology modeling capabilities such as inheritance, overrides, and composition. They also support Symphony&rsquo;s expression language for dynamic evaluation.</p>
+<h3 id="campaign-and-activation">Campaign and Activation</h3>
+<p>A <strong>Campaign</strong> defines a workflow, such as a canary deployment, gated deployment, or scheduled deployment.</p>
+<p>An <strong>Activation</strong> is a running instance of a Campaign. You can have multiple Activations of the same Campaign, and they run independently from one another.</p>
+<h2 id="multi-versioned-objects">Multi-versioned objects</h2>
+<p>Some Symphony objects support multi-versioning, including <strong>Solution</strong>, <strong>Catalog</strong>, and <strong>Campaign</strong>. These objects can hold multiple versions.</p>
+<p>For example, a Solution object can be linked to multiple SolutionVersion objects, each representing a specific version of the Solution. This enables additional operations such as rollback.</p>
+
 	
-
-
-
-
-
-
-
-
-  
-    <img src="/docs/symphony%20icon_largetext%20%283%29.png" alt="Symphony logo"
-         style="float: left; width: 180px; max-width: 50%; margin: 0.25rem 1.25rem 0.5rem 0; shape-outside: margin-box;">
-  
-
-
-<p>The edge is heterogeneous, dynamic, and distributed by nature. It is not a fixed cluster with stable membership. Devices come and go. Workloads move. Networks disconnect and recover. Capabilities vary across heavy edge, light edge, and tiny edge environments. Traditional orchestration, built around static membership and centralized assumptions, is not enough for this reality.</p>
-<div style="clear: both;"></div>
-<p>Many assumptions made by cloud-centric orchestrators do not hold at the edge: uniform infrastructure, well-protected security boundaries, a single hardware or software vendor, stable connectivity, and uniformly scaled workloads. We want to bring cloud-like management benefits to edge environments, but that does not mean we can simply apply cloud-centric technologies and designs as-is. Edge orchestration must be designed with the edge in mind.</p>
-<p>Symphony embraces the fluid nature of the edge. It brings together existing services, device classes, software artifacts, and operational toolchains into a consistent, end-to-end intelligent edge experience. Whether components run on Kubernetes, in the cloud, on-premises, or on constrained devices, Symphony provides the coordination layer needed to harmonize distributed components into a unified system without forcing them into a one-size-fits-all model.</p>
-<h1 id="symphony-characteristics">Symphony Characteristics</h1>
-<p>Symphony is designed from the ground up for heterogeneous, dynamic, and distributed edge environments. It orchestrates devices and workloads, including AI workloads, without assuming a fixed cluster, a single platform, or a uniform software stack. Its key characteristics include:</p>
-<ul>
-<li>
-<p><strong>Neutral by design.</strong> Symphony is platform-neutral, protocol-neutral, and artifact-schema-neutral. It works with the toolchains you already have, rather than forcing you to replace them. Existing artifacts, protocols, and operational tools can continue to be used as-is, while Symphony coordinates them as part of a larger system.</p>
-</li>
-<li>
-<p><strong>Adoption that scales with you.</strong> Symphony can run as a single process for simple scenarios or scale out on Kubernetes for production deployments. This allows teams to start small, prove value quickly, and grow into larger deployments without changing the overall operating model.</p>
-</li>
-<li>
-<p><strong>Consistent operations across fragmented toolchains.</strong> Symphony brings security, observability, and policy enforcement across diverse systems, even when individual tools do not provide these capabilities natively. It helps teams apply consistent operational practices across otherwise disconnected environments.</p>
-</li>
-<li>
-<p><strong>Built for constrained and disconnected environments.</strong> Symphony minimizes network traffic and management overhead. Its smallest agent is only 4 KB and can be configured to phone home rarely, or not at all, with a tiny payload. For many scenarios, Symphony also supports agentless deployment, requiring no Symphony components on target devices.</p>
-</li>
-<li>
-<p><strong>End-to-end orchestration capabilities.</strong> Symphony includes device management, workload management, configuration management, workflow management, policy management, template management, and more, providing a unified control layer for complex edge solutionversions.</p>
-</li>
-<li>
-<p><strong>Deeply extensible.</strong> Symphony uses providers to integrate with different platforms, protocols, and tools. Its internal system components, including the state store, pub-sub channel, and identity provider, can also be replaced or customized to match the needs of your environment.</p>
-</li>
-</ul>
-<h1 id="key-application-scenarios">Key Application Scenarios</h1>
-<p>From large-scale validation systems to fleet operations and edge AI infrastructure, Symphony is already being used to solve some of the most demanding edge orchestration challenges:</p>
-<ul>
-<li>
-<p><strong>Hardware-in-the-loop testing at scale</strong>, where Symphony coordinates distributed test processes end to end using its workflow capabilities.</p>
-</li>
-<li>
-<p><strong>Configuration management across product lines</strong>, where Symphony centrally manages millions of configuration variations through modularization, inheritance, and dynamic expression evaluation.</p>
-</li>
-<li>
-<p><strong>Fleet management</strong>, where Symphony manages vehicles and other distributed assets with workflows, scheduled and on-demand updates, and multi-homing support.</p>
-</li>
-<li>
-<p><strong>Edge AI infrastructure management</strong>, where Symphony simplifies model rollout, coordinates related software updates, and connects edge AI infrastructure with cloud data pipelines.</p>
-</li>
-</ul>
-<h1 id="getting-started">Getting Started</h1>
-<p>The easiest way to get started with Symphony is by using Symphony&rsquo;s CLI tool, called maestro. Use the appropriate command for your platform and then simply use <code>maestro up</code> to launch your Symphony instance:</p>
-
-
-
-
-<ul class="nav nav-tabs" id="tabs-1" role="tablist">
-  <li class="nav-item">
-      <button class="nav-link active"
-          id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
-          data-td-tp-persist="bash" aria-controls="tabs-01-00" aria-selected="true">
-        Bash (Linux/WSL/Mac)
-      </button>
-    </li><li class="nav-item">
-      <button class="nav-link"
-          id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
-          data-td-tp-persist="powershell" aria-controls="tabs-01-01" aria-selected="false">
-        PowerShell (Windows)
-      </button>
-    </li>
-</ul>
-
-<div class="tab-content" id="tabs-1-content">
-    <div class="tab-pane fade show active"
-        id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
-        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash
-</span></span><span style="display:flex;"><span>maestro up --no-k8s</span></span></code></pre></div>
-    </div>
-    <div class="tab-pane fade"
-        id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
-        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>powershell -Command <span style="color:#e6db74">&#34;iwr -useb https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.ps1 | iex&#34;</span>
-</span></span><span style="display:flex;"><span>maestro up --no-k8s</span></span></code></pre></div>
-    </div>
 </div>
 
-<h1 id="whats-next">What&rsquo;s Next</h1>
-<ul>
-<li><a href="/docs/tutorials/">Getting Started Tutorials</a></li>
-<li><a href="/docs/samples/">Sample Gallery</a></li>
-<li><a href="/docs/ecosystem/">Embracing the Ecosystem</a></li>
-</ul>
-
-  
-
-
-<div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</div>
-
-<script>
-    const defaultTextValue = 'Filter...';
-    let searchBox = document.getElementById('search-input');
-    searchBox.value = defaultTextValue;
-    searchBox.onfocus = function () {
-        if (this.value == defaultTextValue) {
-            
-            this.value = '';
-        }
-    }
-    searchBox.onblur = function () {
-        if (this.value == '') {
-            
-            this.value = defaultTextValue;
-        }
-    }
-
-    function filterCards() {
-      
-      var searchInput = document.getElementById('search-input').value;
-
-      
-      var cards = document.querySelectorAll('.card');
-
-      
-      for (var i = 0; i < cards.length; i++) {
-        var card = cards[i];
-        if (card.textContent.toLowerCase().indexOf(searchInput.toLowerCase()) > -1) {
-          card.style.display = "";
-        } else {
-          card.style.display = "none";
-        }
-      }
-    }
-</script>
-</div>
 
           </main>
         </div>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project Symphony Documentation on Project Symphony Docs</title>
+    <title>Eclipse Symphony Documentation on Project Symphony Docs</title>
     <link>https://eclipse-symphony.github.io/docs/</link>
-    <description>Recent content in Project Symphony Documentation on Project Symphony Docs</description>
+    <description>Recent content in Eclipse Symphony Documentation on Project Symphony Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://eclipse-symphony.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://eclipse-symphony.github.io/docs/concepts/overview/</guid>
-      <description>Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
-Abstractions State seeking: How Symphony brings the current state of a system to the desired state.</description>
+      <description>Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and orchestration models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
+Abstractions Information graph: How Symphony organizes, accesses, and synchronizes enterprise information. Orchestration model: How Symphony defines the components that make up a scenario.</description>
     </item>
     
     <item>
@@ -25,6 +25,17 @@ Abstractions State seeking: How Symphony brings the current state of a system to
       <description>This tutorial shows you how to launch Symphony as a single process and call the Symphony APIs. Since all state is kept in memory, you can shut it down safely with no cleanup and no leftovers.
 Part 1: Launch Symphony in a Process Install Maestro and launch Symphony as a process (enabled by the --no-k8s switch):
 Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up --no-k8s powershell -Command &amp;#34;iwr -useb https://raw.</description>
+    </item>
+    
+    <item>
+      <title>Run Symphony on Kubernetes</title>
+      <link>https://eclipse-symphony.github.io/docs/tutorials/run-symphony-on-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eclipse-symphony.github.io/docs/tutorials/run-symphony-on-k8s/</guid>
+      <description>This tutorial shows you how to deploy Symphony to a Kubernetes cluster and use kubectl to interact with Symphony API in addition to REST API.
+Part 1: Deploy Symphony to a Kubernetes cluster Install Maestro and deploy Symphony to a Kubernetes cluster, to which your kubectl is currently pointing:
+Bash (Linux/WSL/Mac) PowerShell (Windows) wget -q https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.sh -O - | /bin/bash maestro up powershell -Command &amp;#34;iwr -useb https://raw.githubusercontent.com/eclipse-symphony/symphony/master/cli/install/install.ps1 | iex&amp;#34; maestro up You should see outputs like:</description>
     </item>
     
     <item>
@@ -48,23 +59,24 @@ Azure Device Update for IoT Hub Azure Resource Manager (ARM) Bash Script Docker 
     </item>
     
     <item>
-      <title>App Orchestration Model</title>
-      <link>https://eclipse-symphony.github.io/docs/concepts/abstractions/app_orch_model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://eclipse-symphony.github.io/docs/concepts/abstractions/app_orch_model/</guid>
-      <description>As an orchestrator, Symphony purposefully designs an application model tailored for orchestration. We refer to this specialized application model as the app orchestration model to distinguish it from a standard application model.
-An app orchestration model defines a collection of interconnected components. Each component can be represented by a different artifact type, such as a Helm Chart, a Kubernetes deployment spec, a Docker container, a configuration map, or anything else. As you can see, Symphony orchestration model allows multiple artifacts from different systems be assembled into one consistent package.</description>
-    </item>
-    
-    <item>
       <title>Information Graph</title>
       <link>https://eclipse-symphony.github.io/docs/concepts/abstractions/info_graph/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://eclipse-symphony.github.io/docs/concepts/abstractions/info_graph/</guid>
-      <description>Symphony provides a generic graph data structure through the object type catalogversion. A catalogversion can be used to model any information ontologies, hardware topologies, asset trees, BOMs, artifact catalogversions and more.
-Typically, an enterprise needs to manage diverse catalogversions encompassing assets, software packages, configurations, and policies. Various personnel within an organization often require access to these catalogversions, each with their unique perspectives and scopes. Unfortunately, this valuable information is frequently dispersed across multiple storage repositories behind different systems.</description>
+      <description>Symphony provides a generic graph data structure through the object type Catalog. A catalog can be used to model any information ontologies, hardware topologies, asset trees, BOMs, artifact catalogs and more.
+Typically, an enterprise needs to manage diverse catalogs encompassing assets, software packages, configurations, and policies. Various personnel within an organization often require access to these catalogs, each with their unique perspectives and scopes. Unfortunately, this valuable information is frequently dispersed across multiple storage repositories behind different systems.</description>
+    </item>
+    
+    <item>
+      <title>Orchestration Model</title>
+      <link>https://eclipse-symphony.github.io/docs/concepts/abstractions/orch_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eclipse-symphony.github.io/docs/concepts/abstractions/orch_model/</guid>
+      <description>As an orchestrator, Symphony purposefully designs a modeling language for orchestration purposes. We refer to this model as the orchestration model. Objects in the orchestration model establish desired state of a system. Symphony runs a continuous state seeking loop that brings the probed system current state towards the desired state.
+Three core object types Symphony desired state is described using three core object types: Solution, Target, and Instance.
+A Solution describes a software stack.</description>
     </item>
     
     <item>

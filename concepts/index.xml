@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://eclipse-symphony.github.io/docs/concepts/overview/</guid>
-      <description>Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and app models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
-Abstractions State seeking: How Symphony brings the current state of a system to the desired state.</description>
+      <description>Symphony operates within an orchestration layer, strategically positioned atop preexisting tools and services. To establish uniformity amidst the diverse edge environment, Symphony relies on a set of fundamental high-level abstractions. These encompass state-seeking, graph, workflow, and orchestration models. These foundational abstractions empower Symphony to deliver robust functionalities across various technologies and platforms while maintaining a concise object model.
+Abstractions Information graph: How Symphony organizes, accesses, and synchronizes enterprise information. Orchestration model: How Symphony defines the components that make up a scenario.</description>
     </item>
     
   </channel>
