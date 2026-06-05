@@ -50,12 +50,13 @@ Azure Device Update for IoT Hub Azure Resource Manager (ARM) Bash Script Docker 
     </item>
     
     <item>
-      <title>Default Sample</title>
-      <link>https://eclipse-symphony.github.io/docs/samples/default-content/</link>
+      <title>Counter Campaign</title>
+      <link>https://eclipse-symphony.github.io/docs/samples/counter-campaign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://eclipse-symphony.github.io/docs/samples/default-content/</guid>
-      <description>This is a starter sample page. Replace this content with your first end-to-end sample scenario.</description>
+      <guid>https://eclipse-symphony.github.io/docs/samples/counter-campaign/</guid>
+      <description>This is a simple campaign that counts from a given value up to 20. It contains a single providers.stage.counter stage, which takes an input value, val, increments it by 1, and passes the updated value through the trigger for the next stage.
+A conditional stage selector selects the next stage. If val is less than 20, the selector routes execution back to the same counter stage, creating a loop. Once val reaches 20, the selector chooses an empty stage instead, terminating the campaign.</description>
     </item>
     
     <item>

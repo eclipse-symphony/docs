@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="https://eclipse-symphony.github.io/docs/tags/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -18,16 +17,25 @@
 <link rel="icon" type="image/png" href="/docs/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/docs/favicons/android-192x192.png" sizes="192x192">
 
-<title>Tags | Project Symphony Docs</title>
-<meta name="description" content="">
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://eclipse-symphony.github.io/docs/tags/" />
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<title>Counter Campaign | Project Symphony Docs</title>
+<meta name="description" content="This is a simple campaign that counts from a given value up to 20. It contains a single providers.stage.counter stage, which takes an input value, val, increments it by 1, and passes the updated value through the trigger for the next stage.
+A conditional stage selector selects the next stage. If val is less than 20, the selector routes execution back to the same counter stage, creating a loop. Once val reaches 20, the selector chooses an empty stage instead, terminating the campaign.">
+<meta property="og:title" content="Counter Campaign" />
+<meta property="og:description" content="This is a simple campaign that counts from a given value up to 20. It contains a single providers.stage.counter stage, which takes an input value, val, increments it by 1, and passes the updated value through the trigger for the next stage.
+A conditional stage selector selects the next stage. If val is less than 20, the selector routes execution back to the same counter stage, creating a loop. Once val reaches 20, the selector chooses an empty stage instead, terminating the campaign." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eclipse-symphony.github.io/docs/samples/counter-campaign/" /><meta property="article:section" content="samples" />
+
+
+<meta itemprop="name" content="Counter Campaign">
+<meta itemprop="description" content="This is a simple campaign that counts from a given value up to 20. It contains a single providers.stage.counter stage, which takes an input value, val, increments it by 1, and passes the updated value through the trigger for the next stage.
+A conditional stage selector selects the next stage. If val is less than 20, the selector routes execution back to the same counter stage, creating a loop. Once val reaches 20, the selector chooses an empty stage instead, terminating the campaign.">
+
+<meta itemprop="wordCount" content="353">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Counter Campaign"/>
+<meta name="twitter:description" content="This is a simple campaign that counts from a given value up to 20. It contains a single providers.stage.counter stage, which takes an input value, val, increments it by 1, and passes the updated value through the trigger for the next stage.
+A conditional stage selector selects the next stage. If val is less than 20, the selector routes execution back to the same counter stage, creating a loop. Once val reaches 20, the selector chooses an empty stage instead, terminating the campaign."/>
 <link rel="preload" href="/docs/scss/main.min.d9b935093e5d382ed69ca976bbbae42a7d7a5bbd7d6d52322bc271b0c1f9d3c0.css" as="style" integrity="sha256-2bk1CT5dOC7WnKl2u7rkKn16W719bVIyK8JxsMH508A=" crossorigin="anonymous">
 <link href="/docs/scss/main.min.d9b935093e5d382ed69ca976bbbae42a7d7a5bbd7d6d52322bc271b0c1f9d3c0.css" rel="stylesheet" integrity="sha256-2bk1CT5dOC7WnKl2u7rkKn16W719bVIyK8JxsMH508A=" crossorigin="anonymous">
 <script
@@ -58,7 +66,7 @@
         }
       </script>
   </head>
-  <body class="td-taxonomy">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -165,14 +173,14 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docssamples-li">
-  <input type="checkbox" id="m-docssamples-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docssamples-li">
+  <input type="checkbox" id="m-docssamples-check" checked/>
   <label for="m-docssamples-check"><a  class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docssamples"><span class="">Samples</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssamplescounter-campaign-li">
-  <input type="checkbox" id="m-docssamplescounter-campaign-check"/>
-  <label for="m-docssamplescounter-campaign-check"><a href="/docs/samples/counter-campaign/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docssamplescounter-campaign"><span class="">Counter Campaign</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docssamplescounter-campaign-li">
+  <input type="checkbox" id="m-docssamplescounter-campaign-check" checked/>
+  <label for="m-docssamplescounter-campaign-check"><a href="/docs/samples/counter-campaign/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docssamplescounter-campaign"><span class="td-sidebar-nav-active-item">Counter Campaign</span></a></label>
   
 </li>
   </ul>
@@ -205,6 +213,15 @@
             
 
 
+<hr />
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1-run-through-the-sample-using-maestro">Part 1: Run through the sample using <code>maestro</code></a></li>
+    <li><a href="#part-2-understand-the-campaign">Part 2: Understand the campaign</a></li>
+    <li><a href="#part-3-clean-up">Part 3. Clean up</a></li>
+  </ul>
+</nav></div>
+
 
 
             
@@ -220,71 +237,78 @@
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/samples/">Samples</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Tags</li>
+    Counter Campaign</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Tags</h1>
-  
+	<h1>Counter Campaign</h1>
+	
 	<header class="article-meta">
 		
 </header>
+	<p>This is a simple campaign that counts from a given value up to 20. It contains a single <code>providers.stage.counter</code> stage, which takes an input value, <code>val</code>, increments it by 1, and passes the updated value through the trigger for the next stage.</p>
+<p>A conditional stage selector selects the next stage. If <code>val</code> is less than 20, the selector routes execution back to the same counter stage, creating a loop. Once val reaches 20, the selector chooses an empty stage instead, terminating the campaign.</p>
+<h2 id="part-1-run-through-the-sample-using-maestro">Part 1: Run through the sample using <code>maestro</code></h2>
+<blockquote>
+<p><strong>NOTE:</strong> This sample assumes you&rsquo;ve already installed and configured <code>maestro</code>.</p>
+</blockquote>
+<ol>
+<li>
+<p>Point <code>maestro</code> to the Symphony installation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>maestro config use-context &lt;context name&gt;
+</span></span></code></pre></div><p>You can use <code>maestro config get-context</code> to check for available contexts and the current context.</p>
+</li>
+<li>
+<p>Run the counter campaign sample, which is one of the packaged samples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>maestro samples run counter-campaign
+</span></span></code></pre></div><p>You should see outputs like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Creating campaign counter-campaign ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Creating campaignversion counter-campaign-v-version1 ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Creating activation counter-activation ... <span style="color:#66d9ef">done</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Check the activation status:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./maestro get activation -n counter-activation --json-path @status.stageHistory<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.outputs
+</span></span></code></pre></div><p>You should see the activation status is 200 (OK), and the output <code>val</code> is 20:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>STATUS  VAL
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">200</span>     <span style="color:#ae81ff">20</span>
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="part-2-understand-the-campaign">Part 2: Understand the campaign</h2>
+<ol>
+<li>Open <code>~/.symphony/campaigns/counter/campaign-version.yaml</code> to examine the campaign definition.</li>
+<li>The counter stage uses a <code>providers.stage.counter</code> that takes an input <code>val</code> and increment its value by 1. It then writes the value to its output, which is made avaialble to <code>stageSelector</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">counter</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;counter&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">provider</span>: <span style="color:#e6db74">&#34;providers.stage.counter&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stageSelector</span>: <span style="color:#e6db74">&#34;${{$if($lt($output(counter,val), 20), counter, &#39;&#39;)}}&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">inputs</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">val</span>: <span style="color:#e6db74">&#34;${{$trigger(val, 0)}}&#34;</span>
+</span></span></code></pre></div></li>
+<li>The <code>stageSelector</code> selects the next stage to be executed. In this case, it uses a <code>if</code> statement in Symphony expression that checks if the stage output <code>val</code> is larger than 20. If so, it selects <code>counter</code> as the next stage. Otherwise, it selects an empty stage, which causes the activation to stop. This means the counter stage will be repeatedly called until <code>val</code> reaches 20.</li>
+</ol>
+<h2 id="part-3-clean-up">Part 3. Clean up</h2>
+<ol>
+<li>
+<p>If you run Symphony as a process, simply shut down the process.</p>
+</li>
+<li>
+<p>If you run Symphony on Kubernetes, delete the Symphony objects:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl delete activation counter-activation
+</span></span><span style="display:flex;"><span>kubectl delete campaignversion counter-campaign-v-version1
+</span></span><span style="display:flex;"><span>kubectl delete campaign counter-campaign
+</span></span></code></pre></div></li>
+</ol>
+
 	
-  
-
-
-<div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    
 </div>
 
-<script>
-    const defaultTextValue = 'Filter...';
-    let searchBox = document.getElementById('search-input');
-    searchBox.value = defaultTextValue;
-    searchBox.onfocus = function () {
-        if (this.value == defaultTextValue) {
-            
-            this.value = '';
-        }
-    }
-    searchBox.onblur = function () {
-        if (this.value == '') {
-            
-            this.value = defaultTextValue;
-        }
-    }
-
-    function filterCards() {
-      
-      var searchInput = document.getElementById('search-input').value;
-
-      
-      var cards = document.querySelectorAll('.card');
-
-      
-      for (var i = 0; i < cards.length; i++) {
-        var card = cards[i];
-        if (card.textContent.toLowerCase().indexOf(searchInput.toLowerCase()) > -1) {
-          card.style.display = "";
-        } else {
-          card.style.display = "none";
-        }
-      }
-    }
-</script>
-</div>
 
           </main>
         </div>
